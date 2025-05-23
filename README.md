@@ -32,3 +32,35 @@ This part emphasizes text preprocessing and traditional machine learning classif
 * The model uses learnable word embeddings, processed via a `TextDataManager`.
 
 This part focuses on building and training a deep learning model (CNN) for text classification from scratch.
+
+---
+
+## Part 3: RNNs and Attention-based Text Classification
+
+* Implement and compare multiple RNN variants: Vanilla RNN, GRU, and LSTM
+
+  * Support for multiple hidden layers and output types (`last`, `mean`, `max`)
+* Utilize pretrained GloVe embeddings with three initialization modes:
+
+  * `scratch`, `init-only` (frozen), `init-fine-tune` (trainable)
+* Implement an attention mechanism on the final RNN layer:
+
+  * Compute alignment scores and generate a context vector for classification
+
+This part focuses on capturing long-term dependencies and improving sequence representation through attention.
+
+---
+
+## Part 4: Transformer and Prefix-Tuning for Text Classification
+
+* Build a `TransformerClassifier` using stacked encoder layers with mean pooling
+
+  * Final classification is based on averaged token embeddings
+* Implement `Prefix Tuning` on top of a pretrained BERT model
+
+  * Add learnable prefix embeddings while freezing the BERT backbone
+* Perform hyperparameter tuning and report the best-performing model
+
+This part leverages state-of-the-art transformer-based techniques for efficient and effective fine-tuning.
+
+
